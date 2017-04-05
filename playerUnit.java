@@ -11,17 +11,11 @@ import java.util.List;
 
 public class playerUnit {
         public String name;
-        public int level;
-        //public int uClass;
-        public int health;
-        public int speed;
+        public int level, health, speed, pos, lastI;
         public double exp;
-        public int pos;
-        public int lastI;
         public int stats[] = new int[5]; // [str,dex,vit,int,wis,lck]
         private Equipment equipObj[] = new Equipment[5];
         private statTree statObj = new statTree();
-        //public skillLib skillObj[] = new skillLib[10];
         public List<skillLib> skills = new ArrayList<>();
         
         // Constructor Parameters still to be considered
