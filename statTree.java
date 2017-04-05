@@ -6,4 +6,11 @@ package gameRPG;
  */
 public class statTree {
         
+    public statTree(){
+        // Contructor Stuff here
+    }
+    
+    public void statMod(){ // maybe??
+        
+    }
 }

@@ -1,7 +1,5 @@
 package gameRPG;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
