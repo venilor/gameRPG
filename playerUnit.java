@@ -11,9 +11,9 @@ import java.util.List;
 
 public class playerUnit {
         public String name;
-        public int level, health, speed, pos, lastI;
+        public int level, health, speed, pos, lastI, atkRate = 100;
         public double exp;
-        public int stats[] = new int[5]; // [str,dex,vit,int,wis,lck]
+        public int stats[] = new int[6]; // [str,dex,vit,int,wis,lck,evd]
         private Equipment equipObj[] = new Equipment[5];
         private statTree statObj = new statTree();
         public List<skillLib> skills = new ArrayList<>();
@@ -29,6 +29,12 @@ public class playerUnit {
             health = stats[2]*5;
             level = 1;
             exp = 0;
+        }
+        
+        public void updateAtkRate(){
+            if(stats[1] >= 10){
+                atkRate += (stats[1] - 10);
+            }
         }
         
         public void levelUp(int s){

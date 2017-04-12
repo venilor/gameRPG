@@ -5,7 +5,7 @@ package gameRPG;
  * @author User
  */
 public class Equipment {
-        public int inv[] = new int[3]; // Type, Atk, Speed/weight modifier, atkType
+        public int inv[] = new int[5]; // Type, Atk, Speed/weight modifier, atkType, Accuracy
                                        // Types include: 0 = Sword, 1 = Axe, 2 = Spear, 3 = Dagger, 4 = Greatsword,
                                        // 5 = Greataxe, 6 = Halberd, 7 = Hammer, 8 = Greathammer, 9 = Shield,
                                        // 10 = Bow
