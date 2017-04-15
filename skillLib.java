@@ -15,6 +15,7 @@ public class skillLib {
             nameo = "lulzz";
         }
         
+       // Method that updates skill cooldowns and availability
         public void updateSkills(){
             
             if(used){
@@ -26,14 +27,17 @@ public class skillLib {
                 onCooldown = false;
             }
         }
-    
+        
+        // Test function, this will be where skill functions will be determined
         public void setType(int t){
             if(t == 0){
-                System.out.print("Skill 1");
+                System.out.println("Skill 1");
             }else if(t == 1){
-                System.out.print("Skill 2");
+                System.out.println("Skill 2");
             }else if(t == 2){
-                System.out.print("Skill 3");
+                System.out.println("Skill 3");
+            }else if(t == 3){
+                System.out.println("Skill 3");
             }
         }
 }
