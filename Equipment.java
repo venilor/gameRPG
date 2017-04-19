@@ -14,17 +14,23 @@ public class Equipment {
                 
         public Equipment(int wType, playerUnit o){
             // Determines item info based on type
-            switch(inv[0]){
+            switch(wType){
                 case 0:
-                    // Code
-                    inv[1] = 1;
-                    inv[2] = 2;
-                    inv[3] = 3;
-                    inv[4] = 4;
+                    // Bronze Sword
+                    inv[0] = 0;
+                    inv[1] = 4;
+                    inv[2] = 7;
+                    inv[3] = 0;
+                    inv[4] = 95;
                     inv[5] = o.wepMod;
                     break;
-                case 1:
-                    // Code
+                case 9:
+                    // Wooden Shield
+                    inv[0] = 9;
+                    inv[1] = 5;
+                    inv[2] = -5;
+                    inv[3] = 1;
+                    inv[5] = o.blockMod;
                     break;
                 case 2:
                     // Code

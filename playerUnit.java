@@ -13,7 +13,7 @@ public class playerUnit {
         public String name;
         public int level, health, healthMod, speed, speedMod, pos, lastI, atkRate = 100;
         public int dmg[] = new int[2]; // [Damage, Damage Type]
-        public int wepMod=0, block, tempBlock, atkMod;
+        public int wepMod=0, block, tempBlock, blockMod, atkMod;
         public boolean turnStart;
         public double exp;
         public int stats[] = new int[7]; // [str,dex,vit,int,wis,lck,evd]
@@ -24,7 +24,7 @@ public class playerUnit {
         // Constructor Parameters still to be considered
         public playerUnit(String n){
             
-            for(int i = 0; i < 5; i++){
+            for(int i = 0; i < 7; i++){
                 stats[i] = 7;
             }
             
@@ -35,8 +35,9 @@ public class playerUnit {
             level = 1;
             exp = 0;
             
+            // 0 = Main Hand    1 = Offhand
             equipObj[0] = new Equipment(0,this);
-            equipObj[0].inv[0] = 0;
+            equipObj[1] = new Equipment(9,this);
         }
         
         // Update Methods to change values depending on modifiers or stats
@@ -47,7 +48,7 @@ public class playerUnit {
         }
         
         public void updateSpeed(){
-            speed = stats[1]/2 + speedMod;
+            speed = stats[1]/2 + speedMod + equipObj[0].inv[2] + equipObj[1].inv[2];
         }
         
         public void updateHealth(){
@@ -57,6 +58,10 @@ public class playerUnit {
         public void updateDmg(){
             dmg[0] = equipObj[0].inv[1] + equipObj[0].inv[5] + atkMod;
             dmg[1] = equipObj[0].inv[3];
+        }
+        
+        public void updateBlock(){
+            block = equipObj[1].inv[1] + equipObj[1].inv[5];
         }
         
         // Method that recharges block at the end of a turn or after a hit

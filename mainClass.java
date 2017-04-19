@@ -40,28 +40,28 @@ public class mainClass {
         // Test print statements
         System.out.println("\nUnit Name: "+object1.name);
         System.out.println("Health: "+object1.health);
-        System.out.println("Attack: "+object1.atkMod);
+        System.out.println("Attack: "+object1.dmg[0]);
         System.out.println("Block: "+object1.block);
         System.out.println("Speed: "+object1.speed);
         System.out.println("Dodge: "+object1.stats[6]+"\n");
         
         System.out.println("Unit Name: "+object2.name);
         System.out.println("Health: "+object2.health);
-        System.out.println("Attack: "+object2.atkMod);
+        System.out.println("Attack: "+object2.dmg[0]);
         System.out.println("Block: "+object2.block);
         System.out.println("Speed: "+object2.speed);
         System.out.println("Dodge: "+object2.stats[6]+"\n");
         
         System.out.println("Unit Name: "+object3.name);
         System.out.println("Health: "+object3.health);
-        System.out.println("Attack: "+object3.atkMod);
+        System.out.println("Attack: "+object3.dmg[0]);
         System.out.println("Block: "+object3.block);
         System.out.println("Speed: "+object3.speed);
         System.out.println("Dodge: "+object3.stats[6]+"\n");
         
         System.out.println("Unit Name: "+object4.name);
         System.out.println("Health: "+object4.health);
-        System.out.println("Attack: "+object4.atkMod);
+        System.out.println("Attack: "+object4.dmg[0]);
         System.out.println("Block: "+object4.block);
         System.out.println("Speed: "+object4.speed);
         System.out.println("Dodge: "+object4.stats[6]+"\n");
